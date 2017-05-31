@@ -1,0 +1,56 @@
+﻿html, body {
+    margin: 0px;
+    padding: 0px;
+}
+
+.wrapper {
+    box-sizing: border-box;
+    padding: 5px;
+    width: 100%;
+}
+
+.wrapper .row {
+    font-size: 0px;
+    text-align: center;
+}
+
+.wrapper .row * {
+    font-size: 14px;
+}
+
+.wrapper .row:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+}
+
+.wrapper .block {
+ 
+    color: #fff;
+    text-align: center;
+    
+    display: inline-block;
+    height: 50px;
+    margin: 1%;
+    margin-bottom: 5px;
+    width: 13%;
+}
+
+.blockgreencolor{
+     background-color: #4cae4c;
+}
+
+.blockyellowcolor{
+     background-color: #ec971f;
+}
+
+.blockredcolor{
+     background-color: #d43f3a;
+}
+
+.blocknocolor{
+     background-color: #ccc;
+}

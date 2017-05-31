@@ -1,0 +1,274 @@
+﻿<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="c:\users\shreyas\documents\visual studio 2015\Projects\CustomerNeeds\Style.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+<script src="c:\users\shreyas\documents\visual studio 2015\Projects\CustomerNeeds\Script.js"></script>
+<body ng-app="myapp" ng-controller="ListController">
+   <!-- Primary buisness needs start -->
+     <div class="container">
+
+        <div class="col-md-12">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <div>Primary Buisness Needs</div>
+                    <table class="table table-striped table-bordered">
+                        <thead>
+                            <tr>
+
+                                <th>Label</th>
+                                <th>Description</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="primarybuisnessneeds in primaryBuisnessNeeds" ng-init="parentIndex = $index">
+
+                                <td>
+                                    <input type="text" class="form-control" ng-model="primarybuisnessneeds.label" required />
+                                </td>
+                                <td>
+                                    <input type="text" class="form-control" ng-model="primarybuisnessneeds.description" required />
+                                </td>
+                                <td>
+                                    <!--<input type="email" class="form-control" ng-model="primarybuisnessneeds.status" required />-->
+                                    <!--<select ng-model="selectedStatus">
+                                        <option ng-repeat="x in status" value="{{x.color}}">{{x.color}}</option>
+                                    </select>-->
+                                    <div class="dropdown">
+                                        <button type="button" id="pribuineedbtn{{$index}}" data-toggle="dropdown">
+                                            Select Status
+                                            <span class="caret"></span>
+                                        </button>
+                                        <ul class="dropdown-menu">
+                                            <li ng-repeat="x in primarybuisnessneeds.status" ng-click="ddnclick('pribuineedbtn',x.color,primarybuisnessneeds.blockid,parentIndex)">{{x.color}}</li>
+                                        </ul>
+                                    </div>
+
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- primary buisness needs ends -->
+
+    <!--Supporting Buisness needs starts  -->
+    <div class="container">
+
+        <div class="col-md-12">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <div>Supporting Buisness Needs</div>
+                    <table class="table table-striped table-bordered">
+                        <thead>
+                            <tr>
+
+                                <th>Label</th>
+                                <th>Description</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="supportingbuisnessneeds in supportingBuisnessNeeds" ng-init="parentIndex = $index">
+
+                                <td>
+                                    <input type="text" class="form-control" ng-model="supportingbuisnessneeds.label" required />
+                                </td>
+                                <td>
+                                    <input type="text" class="form-control" ng-model="supportingbuisnessneeds.description" required />
+                                </td>
+                                <td>
+                                    <!--<input type="email" class="form-control" ng-model="primarybuisnessneeds.status" required />-->
+                                    <!--<select ng-model="selectedStatus">
+                                        <option ng-repeat="x in status" value="{{x.color}}">{{x.color}}</option>
+                                    </select>-->
+                                    <div class="dropdown">
+                                        <button type="button" id="supportingbuisnessneedsbtn{{$index}}" data-toggle="dropdown">
+                                            Select Status
+                                            <span class="caret"></span>
+                                        </button>
+                                        <ul class="dropdown-menu">
+                                            <li ng-repeat="x in supportingbuisnessneeds.status" ng-click="ddnclick( 'supportingbuisnessneedsbtn', x.color,supportingbuisnessneeds.blockid,parentIndex) " >{{x.color}}</li>
+                                        </ul>
+                                    </div>
+
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- supportin buisness needs ends -->
+
+    <!--Unique Buisness needs starts  -->
+    <div class="container">
+
+        <div class="col-md-12">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <div>Supporting Buisness Needs</div>
+                    <table class="table table-striped table-bordered">
+                        <thead>
+                            <tr>
+
+                                <th>Label</th>
+                                <th>Description</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="uniquebuisnessneeds in uniqueBuisnessNeeds" ng-init="parentIndex = $index">
+
+                                <td>
+                                    <input type="text" class="form-control" ng-model="uniquebuisnessneeds.label" required />
+                                </td>
+                                <td>
+                                    <input type="text" class="form-control" ng-model="uniquebuisnessneeds.description" required />
+                                </td>
+                                <td>
+                                    <!--<input type="email" class="form-control" ng-model="primarybuisnessneeds.status" required />-->
+                                    <!--<select ng-model="selectedStatus">
+                                        <option ng-repeat="x in status" value="{{x.color}}">{{x.color}}</option>
+                                    </select>-->
+                                    <div class="dropdown">
+                                        <button type="button" id="uniquebuisnessneedsbtn{{$index}}" data-toggle="dropdown">
+                                            Select Status
+                                            <span class="caret"></span>
+                                        </button>
+                                        <ul class="dropdown-menu">
+                                            <li ng-repeat="x in uniquebuisnessneeds.status" ng-click="ddnclick( 'uniquebuisnessneedsbtn', x.color,uniquebuisnessneeds.blockid,parentIndex) ">{{x.color}}</li>
+                                        </ul>
+                                    </div>
+
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Unique buisness needs ends -->
+
+
+    <!--Personal need of  main  contact starts  -->
+    <div class="container">
+
+        <div class="col-md-12">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <div>Supporting Buisness Needs</div>
+                    <table class="table table-striped table-bordered">
+                        <thead>
+                            <tr>
+
+                                <th>Label</th>
+                                <th>Description</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="personalneedsmaincontact in personalNeedsMainContact" ng-init="parentIndex = $index">
+
+                                <td>
+                                    <input type="text" class="form-control" ng-model="personalneedsmaincontact.label" required />
+                                </td>
+                                <td>
+                                    <input type="text" class="form-control" ng-model="personalneedsmaincontact.description" required />
+                                </td>
+                                <td>
+                                    <!--<input type="email" class="form-control" ng-model="primarybuisnessneeds.status" required />-->
+                                    <!--<select ng-model="selectedStatus">
+                                        <option ng-repeat="x in status" value="{{x.color}}">{{x.color}}</option>
+                                    </select>-->
+                                    <div class="dropdown">
+                                        <button type="button" id="personalneedsmaincontactbtn{{$index}}" data-toggle="dropdown">
+                                            Select Status
+                                            <span class="caret"></span>
+                                        </button>
+                                        <ul class="dropdown-menu">
+                                            <li ng-repeat="x in personalneedsmaincontact.status" ng-click="ddnclick( 'personalneedsmaincontactbtn', x.color,personalneedsmaincontact.blockid,parentIndex) ">{{x.color}}</li>
+                                        </ul>
+                                    </div>
+
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Personal need of  main  contact ends -->
+
+
+   
+
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <div class="wrapper">
+                <div class="row">
+                    <div id="Profit" class="block blocknocolor">Profit</div>
+                </div>
+
+                <div class="row">
+                    <div  id="Volume" class="block blocknocolor">Volume</div>
+                    <div  id="Revenue" class="block blocknocolor">Revenue</div>
+                    <div id="Margin"  class="block blocknocolor">Margin</div>
+                </div>
+                <div class="row">
+                    <div  id="A" class="block blocknocolor">A</div>
+                    <div  id="B" class="block blocknocolor">B</div>
+                    <div  id="C" class="block blocknocolor">C</div>
+                   
+                </div>
+                <div class="row">
+                    <div  id="D" class="block blocknocolor">D</div>
+                    <div id="E" class="block blocknocolor">E</div>
+                    <div id="F" class="block blocknocolor">F</div>
+                    <div  id="G" class="block blocknocolor">G</div>
+                   
+                </div>
+                <div class="row">
+                    <div id="H" class="block blocknocolor">H</div>
+                    <div id="I" class="block blocknocolor">I</div>
+                    <div id="J" class="block blocknocolor">J</div>
+                    <div id="K" class="block blocknocolor">K</div>
+                    <div id="L" class="block blocknocolor">L</div>
+                  
+                </div>
+
+                <div class="row">
+                    <div id="personalNeeds1" class="block blocknocolor">personalNeeds1</div>
+                    <div id="personalNeeds2" class="block blocknocolor">personalNeeds2</div>
+                    <div id="personalNeeds3" class="block blocknocolor">personalNeeds3</div>
+                    <div id="personalNeeds4" class="block blocknocolor">personalNeeds4</div>
+                    <div id="personalNeeds5" class="block blocknocolor">personalNeeds5</div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+  
+
+
+
+   
+</body>
